@@ -22,7 +22,7 @@
     </header>
 
     <!-- 組員 A 任務：在這裡加上訊息計數顯示 -->
-    <!-- <p id="counter">訊息數：0</p> -->
+    <p id="counter">訊息數：0</p>
 
     <div id="chat-box">
       <div class="message bot">
@@ -42,6 +42,7 @@
   </div>
 
   <script>
+    let messageCount = 0;
     function toggleDarkMode() {
       document.body.classList.toggle('dark-mode');
       const btn = document.getElementById('dark-mode-btn');
@@ -59,6 +60,7 @@
     function sendMessage() {
       const input = document.getElementById('user-input');
       const chatBox = document.getElementById('chat-box');
+      const counter = document.getElementById('counter');
       const text = input.value.trim();
 
       if (!text) return;
@@ -103,6 +105,8 @@
       chatBox.appendChild(botDiv);
 
       messageCount++;
+      counter.textContent = `訊息數：${messageCount}`;
+
       input.value = '';
       chatBox.scrollTop = chatBox.scrollHeight;
     }

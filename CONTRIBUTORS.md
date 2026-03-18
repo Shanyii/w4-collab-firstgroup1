@@ -10,7 +10,7 @@
 | 角色 | 姓名 | 負責分支 | 任務 | 狀態 |
 |------|------|---------|------|------|
 | 組長 | （填名字）| `main` | 修改標題 & header 顏色 | ⬜ |
-| 組員 A | （填名字）| `feature/member-a` | 修改使用者訊息顏色 & 加計數器 | ⬜ |
+| 組員 A | 黃柏豪 | `feature/member-a` | 修改使用者訊息顏色 & 加計數器 | 🔀 |
 | 組員 B | （填名字）| `feature/member-b` | 修改按鈕樣式 & 加 footer 名單 | ⬜ |
 | 組員 C | （填名字）| `feature/member-c` | 加入歡迎訊息 & 自訂回覆邏輯 | ⬜ |
 | 組員 D | （填名字）| `feature/member-d` | 加入深色模式切換按鈕 | ⬜ |
@@ -29,9 +29,9 @@
 - [ ] 最後負責 review 所有 PR 並 merge
 
 ### 組員 A（`feature/member-a` branch）
-- [ ] 修改 `style.css` 裡 `.message.user` 的 `background` 顏色
-- [ ] 在 `index.html` 加上訊息計數顯示（取消那行 comment）
-- [ ] 在 `sendMessage()` 函數中加上更新計數的邏輯
+- [ V ] 修改 `style.css` 裡 `.message.user` 的 `background` 顏色
+- [ V ] 在 `index.html` 加上訊息計數顯示（取消那行 comment）
+- [ V ] 在 `sendMessage()` 函數中加上更新計數的邏輯
 - [ ] 開 PR，請組長 review
 
 ### 組員 B（`feature/member-b` branch）
