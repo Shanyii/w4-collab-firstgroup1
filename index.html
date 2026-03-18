@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
+
 <head>
   <meta charset="UTF-8">
   <title>我們組的 Chatbot</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
   <div class="container">
@@ -14,7 +16,9 @@
         <h1>🤖 第 X 組的 Chatbot</h1>
         <p class="subtitle">W4 多人協作練習</p>
       </div>
-      <button onclick="toggleDarkMode()" id="dark-mode-btn" style="background: transparent; border: 1px solid white; color: white; padding: 5px 10px; border-radius: 5px; cursor: pointer;">🌙 暗色</button>
+      <button onclick="toggleDarkMode()" id="dark-mode-btn"
+        style="background: transparent; border: 1px solid white; color: white; padding: 5px 10px; border-radius: 5px; cursor: pointer;">🌙
+        暗色</button>
     </header>
 
     <!-- 組員 A 任務：在這裡加上訊息計數顯示 -->
@@ -74,10 +78,18 @@
       chatBox.scrollTop = chatBox.scrollHeight;
     }
 
-    document.getElementById('user-input').addEventListener('keypress', function(e) {
+    document.getElementById('user-input').addEventListener('keypress', function (e) {
       if (e.key === 'Enter') sendMessage();
     });
+
+    // 深色模式切換
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark');
+      const btn = document.getElementById('dark-mode-toggle');
+      btn.textContent = document.body.classList.contains('dark') ? '☀️' : '🌙';
+    }
   </script>
 
 </body>
+
 </html>
