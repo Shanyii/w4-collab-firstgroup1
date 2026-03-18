@@ -29,9 +29,9 @@
 - [ ] 最後負責 review 所有 PR 並 merge
 
 ### 組員 A（`feature/member-a` branch）
-- [ ] 修改 `style.css` 裡 `.message.user` 的 `background` 顏色
-- [ ] 在 `index.html` 加上訊息計數顯示（取消那行 comment）
-- [ ] 在 `sendMessage()` 函數中加上更新計數的邏輯
+- [ V ] 修改 `style.css` 裡 `.message.user` 的 `background` 顏色
+- [ V ] 在 `index.html` 加上訊息計數顯示（取消那行 comment）
+- [ V ] 在 `sendMessage()` 函數中加上更新計數的邏輯
 - [ ] 開 PR，請組長 review
 
 ### 組員 B（`feature/member-b` branch）
