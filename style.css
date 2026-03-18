@@ -7,7 +7,7 @@
 
 body {
   font-family: sans-serif;
-  background-color: #f0f4f8;
+  background-color: #e0f2fe; /* Light blue background */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -118,8 +118,9 @@ body.dark footer {
 }
 
 .message.bot {
-  background: #f0f4f8;
-  color: #333;
+  background: transparent;
+  border: 2px solid #fef3c7; /* Cream color border */
+  color: #0369a1; /* Light blue text */
   align-self: flex-start;
 }
 
@@ -127,8 +128,8 @@ body.dark footer {
    組員 A 任務：修改這裡的顏色
    ──────────────────────────────────── */
 .message.user {
-  background: #4caf87;   /* 改成你喜歡的顏色 */
-  color: white;
+  background: #fef3c7; /* Cream color background */
+  color: #0369a1; /* Light blue text */
   align-self: flex-end;
 }
 
