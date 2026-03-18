@@ -10,8 +10,13 @@
   <div class="container">
     <header>
       <!-- 組長任務：把這裡改成你們組的名稱 -->
-      <h1>🤖 第 X 組的 Chatbot</h1>
-      <p class="subtitle">W4 多人協作練習</p>
+      <div class="header-row">
+        <div>
+          <h1>🤖 第 X 組的 Chatbot</h1>
+          <p class="subtitle">W4 多人協作練習</p>
+        </div>
+        <button id="dark-mode-toggle" onclick="toggleDarkMode()" title="切換深色模式">🌙</button>
+      </div>
     </header>
 
     <!-- 組員 A 任務：在這裡加上訊息計數顯示 -->
@@ -60,6 +65,13 @@
     document.getElementById('user-input').addEventListener('keypress', function(e) {
       if (e.key === 'Enter') sendMessage();
     });
+
+    // 深色模式切換
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark');
+      const btn = document.getElementById('dark-mode-toggle');
+      btn.textContent = document.body.classList.contains('dark') ? '☀️' : '🌙';
+    }
   </script>
 
 </body>
