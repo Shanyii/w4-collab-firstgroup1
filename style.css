@@ -27,12 +27,75 @@ body {
    組長任務：修改這裡的顏色和樣式
    ──────────────────────────────────── */
 header {
-  background: #4f8ef7;   /* 改成你們組喜歡的顏色 */
+  background: #f4a7b9;   /* 日系櫻花粉色 */
   color: white;
   padding: 20px 24px;
 }
 header h1 { font-size: 20px; }
 header .subtitle { font-size: 13px; opacity: 0.85; margin-top: 4px; }
+
+.header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#dark-mode-toggle {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 6px 10px;
+  border-radius: 8px;
+  transition: background 0.3s;
+}
+#dark-mode-toggle:hover {
+  background: rgba(255, 255, 255, 0.35);
+}
+
+/* ── 深色模式 ─────────────────────── */
+body.dark {
+  background-color: #1a1a2e;
+  color: #e0e0e0;
+}
+
+body.dark .container {
+  background: #16213e;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+body.dark #chat-box {
+  background: #16213e;
+}
+
+body.dark .message.bot {
+  background: #1a1a2e;
+  color: #ccc;
+}
+
+body.dark .message.user {
+  background: #0f3460;
+  color: #e0e0e0;
+}
+
+body.dark .input-area {
+  border-top: 1px solid #2a2a4a;
+}
+
+body.dark .input-area input {
+  background: #1a1a2e;
+  border-color: #2a2a4a;
+  color: #e0e0e0;
+}
+
+body.dark .input-area button {
+  background: #0f3460;
+}
+
+body.dark footer {
+  border-top: 1px solid #2a2a4a;
+  color: #666;
+}
 
 /* ── chat-box ────────────────────────
    共用：不需修改
@@ -108,4 +171,40 @@ footer {
   font-size: 12px;
   color: #999;
   border-top: 1px solid #f0f0f0;
+}
+
+/* ── 暗色模式 (Dark Mode) ────────────────────
+   切換狀態套用
+   ──────────────────────────────────── */
+body.dark-mode {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+body.dark-mode .container {
+  background: #1e1e1e;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+}
+
+body.dark-mode header {
+  background: #2a2a2a;
+}
+
+body.dark-mode .message.bot {
+  background: #333;
+  color: #e0e0e0;
+}
+
+body.dark-mode .input-area {
+  border-top: 1px solid #333;
+}
+
+body.dark-mode .input-area input {
+  background: #2a2a2a;
+  color: white;
+  border: 1px solid #444;
+}
+
+body.dark-mode footer {
+  border-top: 1px solid #333;
 }

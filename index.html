@@ -1,17 +1,24 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
+
 <head>
   <meta charset="UTF-8">
   <title>我們組的 Chatbot</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
   <div class="container">
-    <header>
-      <!-- 組長任務：把這裡改成你們組的名稱 -->
-      <h1>🤖 第 X 組的 Chatbot</h1>
-      <p class="subtitle">W4 多人協作練習</p>
+    <header style="display: flex; justify-content: space-between; align-items: center;">
+      <div>
+        <!-- 組長任務：把這裡改成你們組的名稱 -->
+        <h1>🤖 第 X 組的 Chatbot</h1>
+        <p class="subtitle">W4 多人協作練習</p>
+      </div>
+      <button onclick="toggleDarkMode()" id="dark-mode-btn"
+        style="background: transparent; border: 1px solid white; color: white; padding: 5px 10px; border-radius: 5px; cursor: pointer;">🌙
+        暗色</button>
     </header>
 
     <!-- 組員 A 任務：在這裡加上訊息計數顯示 -->
@@ -35,16 +42,19 @@
   </div>
 
   <script>
-    let messageCount = 0;
-    const emperorResponses = [
-      "准奏",
-      "退下吧 朕乏了",
-      "朕知道了 愛卿所言甚是",
-      "此等小事 何須煩擾朕",
-      "大膽 竟敢對朕如此無禮",
-      "賞",
-      "拉出去斬了"
-    ];
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark-mode');
+      const btn = document.getElementById('dark-mode-btn');
+      if (document.body.classList.contains('dark-mode')) {
+        btn.textContent = '☀️ 亮色';
+        btn.style.color = '#333';
+        btn.style.borderColor = '#333';
+      } else {
+        btn.textContent = '🌙 暗色';
+        btn.style.color = 'white';
+        btn.style.borderColor = 'white';
+      }
+    }
 
     function sendMessage() {
       const input = document.getElementById('user-input');
@@ -97,10 +107,18 @@
       chatBox.scrollTop = chatBox.scrollHeight;
     }
 
-    document.getElementById('user-input').addEventListener('keypress', function(e) {
+    document.getElementById('user-input').addEventListener('keypress', function (e) {
       if (e.key === 'Enter') sendMessage();
     });
+
+    // 深色模式切換
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark');
+      const btn = document.getElementById('dark-mode-toggle');
+      btn.textContent = document.body.classList.contains('dark') ? '☀️' : '🌙';
+    }
   </script>
 
 </body>
+
 </html>
