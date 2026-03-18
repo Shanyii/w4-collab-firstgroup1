@@ -19,7 +19,7 @@
 
     <div id="chat-box">
       <div class="message bot">
-        嗨！這是我們組一起做的 Chatbot 🎉
+        大膽刁民 報上名來 朕今日正好有空聽你碎嘴
       </div>
     </div>
 
@@ -35,6 +35,17 @@
   </div>
 
   <script>
+    let messageCount = 0;
+    const emperorResponses = [
+      "准奏",
+      "退下吧 朕乏了",
+      "朕知道了 愛卿所言甚是",
+      "此等小事 何須煩擾朕",
+      "大膽 竟敢對朕如此無禮",
+      "賞",
+      "拉出去斬了"
+    ];
+
     function sendMessage() {
       const input = document.getElementById('user-input');
       const chatBox = document.getElementById('chat-box');
@@ -49,10 +60,39 @@
 
       const botDiv = document.createElement('div');
       botDiv.className = 'message bot';
-      // 組員 A 任務：修改這裡的回覆邏輯
-      botDiv.textContent = `你說了「${text}」！`;
+      
+      let reply = "";
+      if (messageCount === 0) {
+        reply = "住口";
+      } else {
+        // 簡單的關鍵字邏輯
+        const now = new Date();
+        const year = now.getFullYear();
+        const month = now.getMonth() + 1;
+        const date = now.getDate();
+
+        if (text.includes("日期") || text.includes("今天") || text.includes("幾號")) {
+          reply = `今日乃西元${year}年${month}月${date}日 爾等刁民連日子都記不得嗎`;
+        } else if (text.includes("天氣")) {
+          reply = "朕觀今日晴空萬里 乃祥瑞之兆 預示朕的大好江山萬年長青";
+        } else if (text.includes("錢") || text.includes("稅") || text.includes("窮")) {
+          reply = "國庫空虛 爾等竟還敢提錢 拖出去重打三十大板";
+        } else if (text.includes("打仗") || text.includes("兵") || text.includes("敵")) {
+          reply = "朕的精銳之師早已整裝待發 區區小賊 何足掛齒";
+        } else if (text.includes("名") || text.includes("是誰")) {
+          reply = "憑你也配問朕的名諱 跪下";
+        } else if (text.includes("吃") || text.includes("飯") || text.includes("餓")) {
+          reply = "御膳房今日做了八寶鴨 朕賞你個鴨屁股吧";
+        } else {
+          const randomIndex = Math.floor(Math.random() * emperorResponses.length);
+          reply = emperorResponses[randomIndex];
+        }
+      }
+      
+      botDiv.textContent = reply;
       chatBox.appendChild(botDiv);
 
+      messageCount++;
       input.value = '';
       chatBox.scrollTop = chatBox.scrollHeight;
     }
