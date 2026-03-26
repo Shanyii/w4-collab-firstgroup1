@@ -9,11 +9,11 @@
 
 | 角色 | 姓名 | 負責分支 | 任務 | 狀態 |
 |------|------|---------|------|------|
-| 組長 | （填名字）| `main` | 修改標題 & header 顏色 | ⬜ |
-| 組員 A | 黃柏豪 | `feature/member-a` | 修改使用者訊息顏色 & 加計數器 | 🔀 |
+| 組長 | 楊姍頤 | `main` | 修改標題 & header 顏色 | ✅ |
+| 組員 A | 黃柏豪 | `feature/member-a` | 修改使用者訊息顏色 & 加計數器 | ✅ |
 | 組員 B | （填名字）| `feature/member-b` | 修改按鈕樣式 & 加 footer 名單 | ⬜ |
 | 組員 C | （填名字）| `feature/member-c` | 加入歡迎訊息 & 自訂回覆邏輯 | ⬜ |
-| 組員 D | 林瑞城 | `feature/member-d` | 加入深色模式切換按鈕 | 🔀 |
+| 組員 D | 林瑞城 | `feature/member-d` | 加入深色模式切換按鈕 | ✅ |
 | 組員 E | （填名字）| `feature/member-e` | 加入清除對話功能 | ⬜ |
 
 狀態：⬜ 未開始 / 🔄 進行中 / ✅ 已完成 / 🔀 PR 已開 / ✔️ 已 Merge
@@ -23,10 +23,10 @@
 ## 各組員任務說明
 
 ### 組長（`main` branch）
-- [ ] 把 `index.html` 裡的「第 X 組」改成你們組的實際名稱
-- [ ] 修改 `style.css` 裡 `header` 的背景顏色
-- [ ] 在這個檔案填入所有組員姓名
-- [ ] 最後負責 review 所有 PR 並 merge
+- [✅ ] 把 `index.html` 裡的「第 X 組」改成你們組的實際名稱
+- [✅ ] 修改 `style.css` 裡 `header` 的背景顏色
+- [✅ ] 在這個檔案填入所有組員姓名
+- [✅ ] 最後負責 review 所有 PR 並 merge
 
 ### 組員 A（`feature/member-a` branch）
 - [ V ] 修改 `style.css` 裡 `.message.user` 的 `background` 顏色
